@@ -5,7 +5,7 @@ require 'test_helper'
 #         run  bundle exec spring binstub --all
 #Traceback (most recent call last):
 #/usr/bin/ruby2.5: No such file or directory -- /usr/bin/bundle (LoadError)
-
+#install the spring and bundle to debug but failed
 class EventMailerTest < ActionMailer::TestCase
   
   setup do
