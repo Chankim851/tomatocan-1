@@ -1,4 +1,10 @@
 require 'test_helper'
+#get error likethat
+#Traceback (most recent call last):
+#/usr/bin/ruby2.5: No such file or directory -- /usr/bin/bundle (LoadError)
+#         run  bundle exec spring binstub --all
+#Traceback (most recent call last):
+#/usr/bin/ruby2.5: No such file or directory -- /usr/bin/bundle (LoadError)
 
 class EventMailerTest < ActionMailer::TestCase
   
