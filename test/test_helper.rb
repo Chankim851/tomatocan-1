@@ -15,7 +15,7 @@ SimpleCov.start 'rails' do
   #add_filter '/spec/' # for rspec
   add_filter '/test/' # for minitest
 end
-
+#Need a bundle exec spring 
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
