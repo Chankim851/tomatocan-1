@@ -9,13 +9,15 @@ require 'capybara/minitest'
 require 'selenium-webdriver'
 require 'simplecov'
 require './test/test_helper'
+
+#Simple cov used to generate a coverage report
 SimpleCov.start 'rails' do
   add_filter '/bin/'
   add_filter '/db/'
-  #add_filter '/spec/' # for rspec
+  add_filter '/spec/' # for rspec
   add_filter '/test/' # for minitest
 end
-#Need a bundle exec spring 
+
 class ActionDispatch::IntegrationTest
   # Make the Capybara DSL available in all integration tests
   include Capybara::DSL
