@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-ruby "2.6.6"
+ruby "2.5.1"
 # change the version to 2.6.6
 gem 'listen'
 gem 'pg'
