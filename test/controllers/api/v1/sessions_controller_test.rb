@@ -23,5 +23,6 @@ class Api::V1::SessionsControllerTest < ActionController::TestCase
     assert_not_nil(json_response['token'])
     assert_not_nil(json_response['permalink'])
   end
-
+#/usr/lib/ruby/vendor_ruby/rails/app_rails_loader.rb:39: warning: Insecure world writable dir /mnt/c in PATH, mode 040777
+#You must use Bundler 2 or greater with this lockfile.
 end
