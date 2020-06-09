@@ -23,9 +23,10 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Raise exceptions instead of rendering exception templates.
+  # unknown command line flag 'all' error
   config.action_dispatch.show_exceptions = false
 
-  # Disable request forgery protection in test environment.
+  # Disable request forgery protection in test environment..
   config.action_controller.allow_forgery_protection = false
   config.action_mailer.perform_caching = false
 
