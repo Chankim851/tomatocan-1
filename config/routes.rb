@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   match 'harassment',     to: 'static_pages#harassment', via: 'get'
   match 'fellowship',     to: 'static_pages#fellowship', via: 'get'
   match 'seniorliving',   to: 'static_pages#seniorliving', via: 'get'
+  match 'studyhall',      to: 'static_pages#studyhall', via: 'get'
+
   
   match '/merchandises/standardperks' => 'merchandises#standardperks', :as => :standardperks, via: 'get'
   match '/merchandises/new' => 'merchandises#new', :as => :createperk, via: 'get'
