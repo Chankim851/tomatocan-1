@@ -49,6 +49,9 @@ class EventsController < ApplicationController
     @event.update_attribute(:user_id, params[:event][:usrid])
     user = User.find(@event.usrid)
     offset = -1 * Time.now.in_time_zone("Pacific Time (US & Canada)").gmt_offset/3600
+    # calculate local time in pacific time
+    converted_start_time = start_date.in_time_zone("Pacific Time (US & Canada)")	    
+    converted_end_time = start_date.in_time_zone("Pacific Time (US & Canada)") + 1.hour
     reminder_hour = @event.start_at + offset.hours - 1.hours
     @reminder_date = @event.start_at - 1.days #why is the scope beyond local? Do we use this variable in a view? I doubt it.
     respond_to do |format|
