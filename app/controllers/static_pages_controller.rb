@@ -33,13 +33,13 @@ class StaticPagesController < ApplicationController
     end
   end
 
-  def seniorliving
+ def studyhall
     showrecentconvo = Time.now - 10.hours
-    @events = Event.where( "start_at > ?", showrecentconvo ).order('start_at ASC').paginate(page: params[:page], :per_page => 9)
-    pdtnow = Time.now - 7.hours
-    currconvo = Event.where( "start_at < ? AND end_at > ?", pdtnow, pdtnow ).first
-    nextevent = Event.where( "start_at > ?", pdtnow ).order('start_at ASC').first 
-
+      @events = Event.where( "start_at > ? AND topic = ?", showrecentconvo, 'Study Hall' ).order('start_at ASC').paginate(page: params[:page], :per_page => 9)
+    @eventsAll = Event.where( "start_at > ? AND topic = ?", showrecentconvo, 'Study Hall' )
+    pdtnext = Time.now - 8.hours
+    nextevent = Event.where( "start_at > ?", pdtnow ).order('start_at ASC').first 	    currconvo = Event.where( "start_at < ? AND start_at > ? AND topic = ?", pdtnow, pdtnext, 'Study Hall' ).first
+    nextevent = Event.where( "start_at > ? AND topic = ?", pdtnow, 'Study Hall' ).order('start_at ASC').first
     if currconvo.present?
       @displayconvo = currconvo
     else 
