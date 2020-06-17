@@ -24,14 +24,7 @@ class UserEditsProfile < ActionDispatch::IntegrationTest
     assert page.has_content? "Test Category"
   end
 
-  test "can edit social media with correct attributes" do
-    fill_in id: "user_twitter", with: "test_twitter_handle"
-    fill_in id: "user_youtube1", with: "http://www.youtube.com/watch?v=/frlviTJcVUo"
-    fill_in id: "user_youtube2", with: "http://www.youtube.com/watch?v=/frlviTJcVUo"
-    fill_in id: "user_youtube3", with: "http://www.youtube.com/watch?v=/frlviTJcVUo"
 
-    find(id: "cancelProfileButton", match: :first).click
-  end
 
   test "can cancel edit profile page" do
     find(id: "cancelProfileButton", match: :first).click
