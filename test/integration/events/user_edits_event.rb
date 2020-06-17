@@ -1,5 +1,4 @@
-require "test_helper"
-require "capybara-screenshot/minitest"
+
 
 class UserEditsEvent < ActionDispatch::IntegrationTest
   setup do
