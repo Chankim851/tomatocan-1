@@ -12,7 +12,7 @@ class UserEditsProfile < ActionDispatch::IntegrationTest
 
   test "can edit profile page with correct attributes" do
     fill_in id: "user_name", with: "Cody Karunas"
-    fill_in id: "user_about", with: "About me description"
+    fill_in id: "user_about", with: "About you"
     fill_in id: "user_genre1", with: "Test Category"
     fill_in id: "user_genre2", with: "Test Category"
     fill_in id: "user_genre3", with: "Test Category"
